@@ -1,0 +1,903 @@
+
+#----------------------------- Global Properties ----------------------------#
+
+/outputDir:bin/$(Platform)
+/intermediateDir:obj/$(Platform)
+/platform:Windows
+/config:
+/profile:Reach
+/compress:False
+
+#-------------------------------- References --------------------------------#
+
+
+#---------------------------------- Content ---------------------------------#
+
+#begin ../../../../OneDrive/Desktop/game assets 2/Health and Points Bars/Sprites/Heart Bar/Heart Stage 1.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../../../OneDrive/Desktop/game assets 2/Health and Points Bars/Sprites/Heart Bar/Heart Stage 1.png;Health and Points Bars/Sprites/Heart Bar/Heart Stage 1.png
+
+#begin ../../../../OneDrive/Desktop/game assets 2/Health and Points Bars/Sprites/Heart Bar/Heart Stage 2.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../../../OneDrive/Desktop/game assets 2/Health and Points Bars/Sprites/Heart Bar/Heart Stage 2.png;Health and Points Bars/Sprites/Heart Bar/Heart Stage 2.png
+
+#begin ../../../../OneDrive/Desktop/game assets 2/Health and Points Bars/Sprites/Heart Bar/Heart Stage 3.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../../../OneDrive/Desktop/game assets 2/Health and Points Bars/Sprites/Heart Bar/Heart Stage 3.png;Health and Points Bars/Sprites/Heart Bar/Heart Stage 3.png
+
+#begin ../../../../OneDrive/Desktop/game assets 2/Health and Points Bars/Sprites/Heart Bar/Heart Stage 4.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../../../OneDrive/Desktop/game assets 2/Health and Points Bars/Sprites/Heart Bar/Heart Stage 4.png;Health and Points Bars/Sprites/Heart Bar/Heart Stage 4.png
+
+#begin ../../../../OneDrive/Desktop/game assets 2/Health and Points Bars/Sprites/Heart Bar/Heart Stage 5.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../../../OneDrive/Desktop/game assets 2/Health and Points Bars/Sprites/Heart Bar/Heart Stage 5.png;Health and Points Bars/Sprites/Heart Bar/Heart Stage 5.png
+
+#begin ../../../../OneDrive/Desktop/game assets 2/SHMUP-Asset-Pack-1/PNG/Projectiles/Bullets/Bullets-1.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../../../OneDrive/Desktop/game assets 2/SHMUP-Asset-Pack-1/PNG/Projectiles/Bullets/Bullets-1.png;SHMUP-Asset-Pack-1/PNG/Projectiles/Bullets/Bullets-1.png
+
+#begin ../../../../OneDrive/Desktop/game assets 2/SHMUP-Asset-Pack-1/PNG/Projectiles/Bullets/Bullets-2.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../../../OneDrive/Desktop/game assets 2/SHMUP-Asset-Pack-1/PNG/Projectiles/Bullets/Bullets-2.png;SHMUP-Asset-Pack-1/PNG/Projectiles/Bullets/Bullets-2.png
+
+#begin ../../../../OneDrive/Desktop/game assets 2/SHMUP-Asset-Pack-1/PNG/Projectiles/Flameshot/Flameshot-1.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../../../OneDrive/Desktop/game assets 2/SHMUP-Asset-Pack-1/PNG/Projectiles/Flameshot/Flameshot-1.png;SHMUP-Asset-Pack-1/PNG/Projectiles/Flameshot/Flameshot-1.png
+
+#begin ../../../../OneDrive/Desktop/game assets 2/SHMUP-Asset-Pack-1/PNG/Projectiles/Flameshot/Flameshot-2.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../../../OneDrive/Desktop/game assets 2/SHMUP-Asset-Pack-1/PNG/Projectiles/Flameshot/Flameshot-2.png;SHMUP-Asset-Pack-1/PNG/Projectiles/Flameshot/Flameshot-2.png
+
+#begin ../../../../OneDrive/Desktop/game assets 2/SHMUP-Asset-Pack-1/PNG/Projectiles/Missile/Missile-1.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../../../OneDrive/Desktop/game assets 2/SHMUP-Asset-Pack-1/PNG/Projectiles/Missile/Missile-1.png;SHMUP-Asset-Pack-1/PNG/Projectiles/Missile/Missile-1.png
+
+#begin ../../../../OneDrive/Desktop/game assets 2/SHMUP-Asset-Pack-1/PNG/Projectiles/Missile/Missile-2.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../../../OneDrive/Desktop/game assets 2/SHMUP-Asset-Pack-1/PNG/Projectiles/Missile/Missile-2.png;SHMUP-Asset-Pack-1/PNG/Projectiles/Missile/Missile-2.png
+
+#begin ../../../../OneDrive/Desktop/game assets 2/SHMUP-Asset-Pack-1/PNG/Projectiles/Missile/Missile-3.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../../../OneDrive/Desktop/game assets 2/SHMUP-Asset-Pack-1/PNG/Projectiles/Missile/Missile-3.png;SHMUP-Asset-Pack-1/PNG/Projectiles/Missile/Missile-3.png
+
+#begin ../../../../OneDrive/Desktop/game assets 2/SHMUP-Asset-Pack-1/PNG/Ships/Variation-1/JetFighter-1.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../../../OneDrive/Desktop/game assets 2/SHMUP-Asset-Pack-1/PNG/Ships/Variation-1/JetFighter-1.png;SHMUP-Asset-Pack-1/PNG/Ships/Variation-1/JetFighter-1.png
+
+#begin ../../../../OneDrive/Desktop/game assets 2/SHMUP-Asset-Pack-1/PNG/Ships/Variation-1/JetFighter-2.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../../../OneDrive/Desktop/game assets 2/SHMUP-Asset-Pack-1/PNG/Ships/Variation-1/JetFighter-2.png;SHMUP-Asset-Pack-1/PNG/Ships/Variation-1/JetFighter-2.png
+
+#begin ../../../../OneDrive/Desktop/game assets 2/SHMUP-Asset-Pack-1/PNG/Ships/Variation-1/JetFighter-3.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../../../OneDrive/Desktop/game assets 2/SHMUP-Asset-Pack-1/PNG/Ships/Variation-1/JetFighter-3.png;SHMUP-Asset-Pack-1/PNG/Ships/Variation-1/JetFighter-3.png
+
+#begin ../../../../OneDrive/Desktop/game assets 2/SHMUP-Asset-Pack-1/PNG/Ships/Variation-2/JetFighter-V2-1.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../../../OneDrive/Desktop/game assets 2/SHMUP-Asset-Pack-1/PNG/Ships/Variation-2/JetFighter-V2-1.png;SHMUP-Asset-Pack-1/PNG/Ships/Variation-2/JetFighter-V2-1.png
+
+#begin ../../../../OneDrive/Desktop/game assets 2/SHMUP-Asset-Pack-1/PNG/Ships/Variation-2/JetFighter-V2-2.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../../../OneDrive/Desktop/game assets 2/SHMUP-Asset-Pack-1/PNG/Ships/Variation-2/JetFighter-V2-2.png;SHMUP-Asset-Pack-1/PNG/Ships/Variation-2/JetFighter-V2-2.png
+
+#begin ../../../../OneDrive/Desktop/game assets 2/SHMUP-Asset-Pack-1/PNG/Ships/Variation-2/JetFighter-V2-3.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../../../OneDrive/Desktop/game assets 2/SHMUP-Asset-Pack-1/PNG/Ships/Variation-2/JetFighter-V2-3.png;SHMUP-Asset-Pack-1/PNG/Ships/Variation-2/JetFighter-V2-3.png
+
+#begin ../../../../OneDrive/Desktop/game assets 2/SHMUP-Asset-Pack-1/PNG/Ships/Variation-3/JetFighter-Var3-1.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../../../OneDrive/Desktop/game assets 2/SHMUP-Asset-Pack-1/PNG/Ships/Variation-3/JetFighter-Var3-1.png;SHMUP-Asset-Pack-1/PNG/Ships/Variation-3/JetFighter-Var3-1.png
+
+#begin ../../../../OneDrive/Desktop/game assets 2/SHMUP-Asset-Pack-1/PNG/Ships/Variation-3/JetFighter-Var3-2.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../../../OneDrive/Desktop/game assets 2/SHMUP-Asset-Pack-1/PNG/Ships/Variation-3/JetFighter-Var3-2.png;SHMUP-Asset-Pack-1/PNG/Ships/Variation-3/JetFighter-Var3-2.png
+
+#begin ../../../../OneDrive/Desktop/game assets 2/SHMUP-Asset-Pack-1/PNG/Ships/Variation-3/JetFighter-Var3-3.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../../../OneDrive/Desktop/game assets 2/SHMUP-Asset-Pack-1/PNG/Ships/Variation-3/JetFighter-Var3-3.png;SHMUP-Asset-Pack-1/PNG/Ships/Variation-3/JetFighter-Var3-3.png
+
+#begin ../../../../OneDrive/Desktop/game assets 2/SHMUP-Asset-Pack-1/PNG/VFX/Exhaust-Afterburner/Exhaust-Afterburner-1.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../../../OneDrive/Desktop/game assets 2/SHMUP-Asset-Pack-1/PNG/VFX/Exhaust-Afterburner/Exhaust-Afterburner-1.png;SHMUP-Asset-Pack-1/PNG/VFX/Exhaust-Afterburner/Exhaust-Afterburner-1.png
+
+#begin ../../../../OneDrive/Desktop/game assets 2/SHMUP-Asset-Pack-1/PNG/VFX/Exhaust-Afterburner/Exhaust-Afterburner-2.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../../../OneDrive/Desktop/game assets 2/SHMUP-Asset-Pack-1/PNG/VFX/Exhaust-Afterburner/Exhaust-Afterburner-2.png;SHMUP-Asset-Pack-1/PNG/VFX/Exhaust-Afterburner/Exhaust-Afterburner-2.png
+
+#begin ../../../../OneDrive/Desktop/game assets 2/SHMUP-Asset-Pack-1/PNG/VFX/Exhaust-Afterburner/Exhaust-Afterburner-3.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../../../OneDrive/Desktop/game assets 2/SHMUP-Asset-Pack-1/PNG/VFX/Exhaust-Afterburner/Exhaust-Afterburner-3.png;SHMUP-Asset-Pack-1/PNG/VFX/Exhaust-Afterburner/Exhaust-Afterburner-3.png
+
+#begin ../../../../OneDrive/Desktop/game assets 2/SHMUP-Asset-Pack-1/PNG/VFX/Exhaust-Afterburner/Exhaust-Afterburner-4.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../../../OneDrive/Desktop/game assets 2/SHMUP-Asset-Pack-1/PNG/VFX/Exhaust-Afterburner/Exhaust-Afterburner-4.png;SHMUP-Asset-Pack-1/PNG/VFX/Exhaust-Afterburner/Exhaust-Afterburner-4.png
+
+#begin ../../../../OneDrive/Desktop/game assets 2/SHMUP-Asset-Pack-1/PNG/VFX/Exhaust-Missile/Exhaust-Missile-1.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../../../OneDrive/Desktop/game assets 2/SHMUP-Asset-Pack-1/PNG/VFX/Exhaust-Missile/Exhaust-Missile-1.png;SHMUP-Asset-Pack-1/PNG/VFX/Exhaust-Missile/Exhaust-Missile-1.png
+
+#begin ../../../../OneDrive/Desktop/game assets 2/SHMUP-Asset-Pack-1/PNG/VFX/Exhaust-Missile/Exhaust-Missile-2.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../../../OneDrive/Desktop/game assets 2/SHMUP-Asset-Pack-1/PNG/VFX/Exhaust-Missile/Exhaust-Missile-2.png;SHMUP-Asset-Pack-1/PNG/VFX/Exhaust-Missile/Exhaust-Missile-2.png
+
+#begin ../../../../OneDrive/Desktop/game assets 2/SHMUP-Asset-Pack-1/PNG/VFX/Exhaust-Missile/Exhaust-Missile-3.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../../../OneDrive/Desktop/game assets 2/SHMUP-Asset-Pack-1/PNG/VFX/Exhaust-Missile/Exhaust-Missile-3.png;SHMUP-Asset-Pack-1/PNG/VFX/Exhaust-Missile/Exhaust-Missile-3.png
+
+#begin ../../../../OneDrive/Desktop/game assets 2/SHMUP-Asset-Pack-1/PNG/VFX/Exhaust-Missile/Exhaust-Missile-4.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../../../OneDrive/Desktop/game assets 2/SHMUP-Asset-Pack-1/PNG/VFX/Exhaust-Missile/Exhaust-Missile-4.png;SHMUP-Asset-Pack-1/PNG/VFX/Exhaust-Missile/Exhaust-Missile-4.png
+
+#begin ../../../../OneDrive/Desktop/game assets 2/SHMUP-Asset-Pack-1/PNG/VFX/Exhaust-Normal/Exhaust-Normal-1.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../../../OneDrive/Desktop/game assets 2/SHMUP-Asset-Pack-1/PNG/VFX/Exhaust-Normal/Exhaust-Normal-1.png;SHMUP-Asset-Pack-1/PNG/VFX/Exhaust-Normal/Exhaust-Normal-1.png
+
+#begin ../../../../OneDrive/Desktop/game assets 2/SHMUP-Asset-Pack-1/PNG/VFX/Exhaust-Normal/Exhaust-Normal-2.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../../../OneDrive/Desktop/game assets 2/SHMUP-Asset-Pack-1/PNG/VFX/Exhaust-Normal/Exhaust-Normal-2.png;SHMUP-Asset-Pack-1/PNG/VFX/Exhaust-Normal/Exhaust-Normal-2.png
+
+#begin ../../../../OneDrive/Desktop/game assets 2/SHMUP-Asset-Pack-1/PNG/VFX/Exhaust-Normal/Exhaust-Normal-3.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../../../OneDrive/Desktop/game assets 2/SHMUP-Asset-Pack-1/PNG/VFX/Exhaust-Normal/Exhaust-Normal-3.png;SHMUP-Asset-Pack-1/PNG/VFX/Exhaust-Normal/Exhaust-Normal-3.png
+
+#begin ../../../../OneDrive/Desktop/game assets 2/SHMUP-Asset-Pack-1/PNG/VFX/Exhaust-Normal/Exhaust-Normal-4.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../../../OneDrive/Desktop/game assets 2/SHMUP-Asset-Pack-1/PNG/VFX/Exhaust-Normal/Exhaust-Normal-4.png;SHMUP-Asset-Pack-1/PNG/VFX/Exhaust-Normal/Exhaust-Normal-4.png
+
+#begin ../../../../OneDrive/Desktop/game assets 2/SHMUP-Asset-Pack-1/PNG/VFX/Explosion/Explosion-1.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../../../OneDrive/Desktop/game assets 2/SHMUP-Asset-Pack-1/PNG/VFX/Explosion/Explosion-1.png;SHMUP-Asset-Pack-1/PNG/VFX/Explosion/Explosion-1.png
+
+#begin ../../../../OneDrive/Desktop/game assets 2/SHMUP-Asset-Pack-1/PNG/VFX/Explosion/Explosion-2.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../../../OneDrive/Desktop/game assets 2/SHMUP-Asset-Pack-1/PNG/VFX/Explosion/Explosion-2.png;SHMUP-Asset-Pack-1/PNG/VFX/Explosion/Explosion-2.png
+
+#begin ../../../../OneDrive/Desktop/game assets 2/SHMUP-Asset-Pack-1/PNG/VFX/Explosion/Explosion-3.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../../../OneDrive/Desktop/game assets 2/SHMUP-Asset-Pack-1/PNG/VFX/Explosion/Explosion-3.png;SHMUP-Asset-Pack-1/PNG/VFX/Explosion/Explosion-3.png
+
+#begin ../../../../OneDrive/Desktop/game assets 2/SHMUP-Asset-Pack-1/PNG/VFX/Explosion/Explosion-4.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../../../OneDrive/Desktop/game assets 2/SHMUP-Asset-Pack-1/PNG/VFX/Explosion/Explosion-4.png;SHMUP-Asset-Pack-1/PNG/VFX/Explosion/Explosion-4.png
+
+#begin ../../../../OneDrive/Desktop/game assets 2/SHMUP-Asset-Pack-1/PNG/VFX/Explosion/Explosion-5.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../../../OneDrive/Desktop/game assets 2/SHMUP-Asset-Pack-1/PNG/VFX/Explosion/Explosion-5.png;SHMUP-Asset-Pack-1/PNG/VFX/Explosion/Explosion-5.png
+
+#begin ../../../../OneDrive/Desktop/game assets 2/SHMUP-Asset-Pack-1/PNG/VFX/Explosion/Explosion-6.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../../../OneDrive/Desktop/game assets 2/SHMUP-Asset-Pack-1/PNG/VFX/Explosion/Explosion-6.png;SHMUP-Asset-Pack-1/PNG/VFX/Explosion/Explosion-6.png
+
+#begin ../../../../OneDrive/Desktop/game assets 2/SHMUP-Asset-Pack-1/PNG/VFX/Explosion/Explosion-7.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../../../OneDrive/Desktop/game assets 2/SHMUP-Asset-Pack-1/PNG/VFX/Explosion/Explosion-7.png;SHMUP-Asset-Pack-1/PNG/VFX/Explosion/Explosion-7.png
+
+#begin ../../../../OneDrive/Desktop/game assets 2/SHMUP-Asset-Pack-1/PNG/VFX/Explosion/Explosion-8.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../../../OneDrive/Desktop/game assets 2/SHMUP-Asset-Pack-1/PNG/VFX/Explosion/Explosion-8.png;SHMUP-Asset-Pack-1/PNG/VFX/Explosion/Explosion-8.png
+
+#begin ../../../../OneDrive/Desktop/game assets 2/SHMUP-Asset-Pack-1/PNG/VFX/Impact-Ricochet/Impact-Ricochet-1.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../../../OneDrive/Desktop/game assets 2/SHMUP-Asset-Pack-1/PNG/VFX/Impact-Ricochet/Impact-Ricochet-1.png;SHMUP-Asset-Pack-1/PNG/VFX/Impact-Ricochet/Impact-Ricochet-1.png
+
+#begin ../../../../OneDrive/Desktop/game assets 2/SHMUP-Asset-Pack-1/PNG/VFX/Impact-Ricochet/Impact-Ricochet-2.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../../../OneDrive/Desktop/game assets 2/SHMUP-Asset-Pack-1/PNG/VFX/Impact-Ricochet/Impact-Ricochet-2.png;SHMUP-Asset-Pack-1/PNG/VFX/Impact-Ricochet/Impact-Ricochet-2.png
+
+#begin ../../../../OneDrive/Desktop/game assets 2/SHMUP-Asset-Pack-1/PNG/VFX/Impact-Ricochet/Impact-Ricochet-3.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../../../OneDrive/Desktop/game assets 2/SHMUP-Asset-Pack-1/PNG/VFX/Impact-Ricochet/Impact-Ricochet-3.png;SHMUP-Asset-Pack-1/PNG/VFX/Impact-Ricochet/Impact-Ricochet-3.png
+
+#begin ../../../../OneDrive/Desktop/game assets 2/SHMUP-Asset-Pack-1/Sheets/Projectiles/Bullets/Bullets-spritesheet.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../../../OneDrive/Desktop/game assets 2/SHMUP-Asset-Pack-1/Sheets/Projectiles/Bullets/Bullets-spritesheet.png;SHMUP-Asset-Pack-1/Sheets/Projectiles/Bullets/Bullets-spritesheet.png
+
+#begin ../../../../OneDrive/Desktop/game assets 2/SHMUP-Asset-Pack-1/Sheets/Projectiles/Flameshot/Flameshot-Spritesheet.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../../../OneDrive/Desktop/game assets 2/SHMUP-Asset-Pack-1/Sheets/Projectiles/Flameshot/Flameshot-Spritesheet.png;SHMUP-Asset-Pack-1/Sheets/Projectiles/Flameshot/Flameshot-Spritesheet.png
+
+#begin ../../../../OneDrive/Desktop/game assets 2/SHMUP-Asset-Pack-1/Sheets/Projectiles/Missile/Missile-Spritesheet.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../../../OneDrive/Desktop/game assets 2/SHMUP-Asset-Pack-1/Sheets/Projectiles/Missile/Missile-Spritesheet.png;SHMUP-Asset-Pack-1/Sheets/Projectiles/Missile/Missile-Spritesheet.png
+
+#begin ../../../../OneDrive/Desktop/game assets 2/SHMUP-Asset-Pack-1/Sheets/Ships/Variation 1/JetFighter-Var1-Spritesheet.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../../../OneDrive/Desktop/game assets 2/SHMUP-Asset-Pack-1/Sheets/Ships/Variation 1/JetFighter-Var1-Spritesheet.png;SHMUP-Asset-Pack-1/Sheets/Ships/Variation 1/JetFighter-Var1-Spritesheet.png
+
+#begin ../../../../OneDrive/Desktop/game assets 2/SHMUP-Asset-Pack-1/Sheets/Ships/Variation 2/JetFighter-Var1-Spritesheet.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../../../OneDrive/Desktop/game assets 2/SHMUP-Asset-Pack-1/Sheets/Ships/Variation 2/JetFighter-Var1-Spritesheet.png;SHMUP-Asset-Pack-1/Sheets/Ships/Variation 2/JetFighter-Var1-Spritesheet.png
+
+#begin ../../../../OneDrive/Desktop/game assets 2/SHMUP-Asset-Pack-1/Sheets/Ships/Variation 3/JetFighter-Var3-Spritesheet.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../../../OneDrive/Desktop/game assets 2/SHMUP-Asset-Pack-1/Sheets/Ships/Variation 3/JetFighter-Var3-Spritesheet.png;SHMUP-Asset-Pack-1/Sheets/Ships/Variation 3/JetFighter-Var3-Spritesheet.png
+
+#begin ../../../../OneDrive/Desktop/game assets 2/SHMUP-Asset-Pack-1/Sheets/VFX/Exhaust-Afterburner/Exhaust-Afterburner-Spritesheet.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../../../OneDrive/Desktop/game assets 2/SHMUP-Asset-Pack-1/Sheets/VFX/Exhaust-Afterburner/Exhaust-Afterburner-Spritesheet.png;SHMUP-Asset-Pack-1/Sheets/VFX/Exhaust-Afterburner/Exhaust-Afterburner-Spritesheet.png
+
+#begin ../../../../OneDrive/Desktop/game assets 2/SHMUP-Asset-Pack-1/Sheets/VFX/Exhaust-Missile/Exhaust-Missile-Spritesheet.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../../../OneDrive/Desktop/game assets 2/SHMUP-Asset-Pack-1/Sheets/VFX/Exhaust-Missile/Exhaust-Missile-Spritesheet.png;SHMUP-Asset-Pack-1/Sheets/VFX/Exhaust-Missile/Exhaust-Missile-Spritesheet.png
+
+#begin ../../../../OneDrive/Desktop/game assets 2/SHMUP-Asset-Pack-1/Sheets/VFX/Exhaust-Normal/Exhaust-Normal-Spritesheet.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../../../OneDrive/Desktop/game assets 2/SHMUP-Asset-Pack-1/Sheets/VFX/Exhaust-Normal/Exhaust-Normal-Spritesheet.png;SHMUP-Asset-Pack-1/Sheets/VFX/Exhaust-Normal/Exhaust-Normal-Spritesheet.png
+
+#begin ../../../../OneDrive/Desktop/game assets 2/SHMUP-Asset-Pack-1/Sheets/VFX/Explosion/Explosion-Spritesheet.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../../../OneDrive/Desktop/game assets 2/SHMUP-Asset-Pack-1/Sheets/VFX/Explosion/Explosion-Spritesheet.png;SHMUP-Asset-Pack-1/Sheets/VFX/Explosion/Explosion-Spritesheet.png
+
+#begin ../../../../OneDrive/Desktop/game assets 2/SHMUP-Asset-Pack-1/Sheets/VFX/Impact-Ricochet/Impact-Ricochet-Spritesheet.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:../../../../OneDrive/Desktop/game assets 2/SHMUP-Asset-Pack-1/Sheets/VFX/Impact-Ricochet/Impact-Ricochet-Spritesheet.png;SHMUP-Asset-Pack-1/Sheets/VFX/Impact-Ricochet/Impact-Ricochet-Spritesheet.png
+
+#begin Bullets-1.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Bullets-1.png
+
+#begin Bullets-2.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Bullets-2.png
+
+#begin enemies.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:enemies.png
+
+#begin Exhaust-Normal-1.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Exhaust-Normal-1.png
+
+#begin Exhaust-Normal-2.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Exhaust-Normal-2.png
+
+#begin Exhaust-Normal-3.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Exhaust-Normal-3.png
+
+#begin Exhaust-Normal-4.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Exhaust-Normal-4.png
+
+#begin Flameshot-1.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Flameshot-1.png
+
+#begin Flameshot-2.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Flameshot-2.png
+
+#begin Impact-Ricochet-1.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Impact-Ricochet-1.png
+
+#begin Impact-Ricochet-2.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Impact-Ricochet-2.png
+
+#begin Impact-Ricochet-3.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Impact-Ricochet-3.png
+
+#begin JetFighter-1.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:JetFighter-1.png
+
+#begin JetFighter-2.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:JetFighter-2.png
+
+#begin JetFighter-3.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:JetFighter-3.png
+
+#begin Missile-1.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Missile-1.png
+
+#begin Missile-2.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Missile-2.png
+
+#begin Missile-3.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Missile-3.png
+
+#begin SPACE BACKGROUND.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:SPACE BACKGROUND.png
+
