@@ -19,15 +19,18 @@ namespace SpaceInvaders
         #region fields and properties
         private Microsoft.Xna.Framework.Vector2 position = new Microsoft.Xna.Framework.Vector2 (621/Game1.matrixScale,757/Game1.matrixScale);
         private Texture2D shipTexture;
+        private List<Texture2D> exhaustTextures = new List<Texture2D>();
         private int healthPoints = 100;
         private List<Texture2D> healthTextures;
         private List<Bullet> shipBullets = new List<Bullet>();
-        private ShipBulletTypes currentBullet;
         private float speed = 1.5f;
-        Texture2D bullet;
+        private AnimManager animationManager;
+        private Texture2D exhaustTexture;
         Game1 game;
-
         private bool isInBorder;
+
+
+        public Texture2D ExhaustTexture{ get { return exhaustTexture; } }
 
         public List<Bullet> Bullets { get { return shipBullets; } }
 
@@ -49,6 +52,12 @@ namespace SpaceInvaders
         public Ships(Game1 game)
         {
             this.game = game;
+            exhaustTextures.Add( game.Content.Load<Texture2D>("Exhaust-Normal-1"));
+            exhaustTextures.Add(game.Content.Load<Texture2D>("Exhaust-Normal-2"));
+            exhaustTextures.Add(game.Content.Load<Texture2D>("Exhaust-Normal-3"));
+            exhaustTextures.Add(game.Content.Load<Texture2D>("Exhaust-Normal-4"));
+
+            animationManager = new AnimManager(50, exhaustTextures);
         }
 
         //default ship will be created at spawn location with no powers
@@ -65,6 +74,11 @@ namespace SpaceInvaders
                     shipBullets.Add(new Bullet(this, game));
                     break;
             }
+        }
+
+        public void Update(GameTime gameTime)
+        {
+            exhaustTexture = animationManager.Update(gameTime);
         }
 
         public void inBorder()

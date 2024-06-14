@@ -18,15 +18,11 @@ namespace Space_Invaders
         private MouseState mouseState;
         Keys[] keyboardState;
         private Rectangle border;
-        ShipAnims shipAnims;
         private Vector2 exhaustAnimLocation;
         private int anim4FrameCounter;
         Texture2D spaceBackground;
         private List<Enemy> enemies;
         private Vector2 defaultEnemyPosition;
-        private int anim2FrameCounter = 0;
-        private int millisecondsPerFrame = 500;
-        private int timeSinceLastFrame;
         #endregion
 
         public Game1()
@@ -41,7 +37,6 @@ namespace Space_Invaders
             // TODO: Add your initialization logic here
             defaultEnemyPosition = new Vector2(165,57);
             ship = new Ships(this);
-            shipAnims = new ShipAnims(this, ship);
             border = new Rectangle(new Point(0,100),new Point(340,114));
             _graphics.PreferredBackBufferHeight = 960;
             _graphics.PreferredBackBufferWidth = 1440;
@@ -70,10 +65,10 @@ namespace Space_Invaders
 
             
             ship.move(keyboardState, border);
-
+            ship.Update(gameTime);
             foreach (var bullet in ship.Bullets)
             {
-                bullet.Update();
+                bullet.Update(gameTime);
                 if (bullet.Position.Y < 75)
                 {
                     foreach (var enemy in enemies)
@@ -83,11 +78,7 @@ namespace Space_Invaders
                 }
             }
 
-            anim4FrameCounter++;
-            if (anim4FrameCounter == 4) 
-            {
-                anim4FrameCounter = 0;
-            }
+            
 
             //enemy anim frame time 
             foreach (var enemy in enemies)
@@ -133,7 +124,7 @@ namespace Space_Invaders
                 _spriteBatch.Begin(samplerState: SamplerState.PointClamp, transformMatrix: Matrix.CreateScale(matrixScale), sortMode: SpriteSortMode.FrontToBack);
                 _spriteBatch.Draw(spaceBackground, new Vector2(0,0), null,Color.White, 0f, default, 1f, SpriteEffects.None,0);
                 _spriteBatch.Draw(ship.ShipTexture, ship.Position, null,Color.White, 0f , default, 1f, SpriteEffects.None, 0.2f);
-                _spriteBatch.Draw(shipAnims.rocketFrames[anim4FrameCounter], exhaustAnimLocation, Color.White);
+                _spriteBatch.Draw(ship.ExhaustTexture, exhaustAnimLocation, Color.White);
                 foreach (var bullet in ship.Bullets) 
                 {
                     _spriteBatch.Draw(bullet.Texture, bullet.Position, null,Color.White, 0f, default, 1f, 0, 0.1f);

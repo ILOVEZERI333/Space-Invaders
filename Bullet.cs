@@ -21,6 +21,7 @@ namespace SpaceInvaders
         private bool hit = false;
         private List<Texture2D> bulletHitTextures = new List<Texture2D>();
         private int millisecondsPerFrame = 300;
+        private AnimManager animationManager;
 
 
         public Vector2 Position { get { return _position; } }
@@ -42,23 +43,15 @@ namespace SpaceInvaders
             bulletHitTextures.Add(game.Content.Load<Texture2D>("Impact-Ricochet-1"));
             bulletHitTextures.Add(game.Content.Load<Texture2D>("Impact-Ricochet-2"));
             bulletHitTextures.Add(game.Content.Load<Texture2D>("Impact-Ricochet-3"));
+            animationManager = new AnimManager(300, texture2Ds);
         }
         #endregion
 
         #region methods
-        public void Update() 
+        public void Update(GameTime gameTime) 
         {
-            if (!hit)
-            {
-                counter++;
-                _position += new Vector2(0, _velocity);
-                if (counter == 2)
-                {
-                    counter = 0;
-                }
-                _texture = texture2Ds[(int)counter];
-            }
-
+            _texture = animationManager.Update(gameTime);
+            _position += new Vector2(0, _velocity);
         }
 
         public void Hit(GameTime gametime)
