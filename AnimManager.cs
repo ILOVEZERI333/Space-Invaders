@@ -33,13 +33,14 @@ namespace SpaceInvaders
             if (active)
             {
                 timeSinceLastFrame += gameTime.ElapsedGameTime.Milliseconds;
-                if (millisecondsPerFrame > timeSinceLastFrame)
+                if (millisecondsPerFrame < timeSinceLastFrame)
                 {
                     indexer++;
                     if (indexer == frames.Count - 1)
                     {
                         indexer = 0;
                     }
+                    timeSinceLastFrame = 0;
                 }
 
                 return frames[indexer];

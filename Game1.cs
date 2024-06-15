@@ -2,6 +2,7 @@
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using SpaceInvaders;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
@@ -60,7 +61,7 @@ namespace Space_Invaders
             mouseState = Mouse.GetState();
             keyboardState = Keyboard.GetState().GetPressedKeys();
             exhaustAnimLocation = new Vector2(ship.Position.X + ship.ShipTexture.Width / 2.5f, ship.Position.Y + ship.ShipTexture.Height);
-
+            
             
 
             
@@ -69,6 +70,10 @@ namespace Space_Invaders
             foreach (var bullet in ship.Bullets)
             {
                 bullet.Update(gameTime);
+                if (keyboardState.Contains(Keys.C))
+                {
+                    Console.WriteLine();
+                }
                 if (bullet.Position.Y < 75)
                 {
                     foreach (var enemy in enemies)
@@ -78,12 +83,20 @@ namespace Space_Invaders
                 }
             }
 
+#if DEBUG
             
+#endif
 
             //enemy anim frame time 
             foreach (var enemy in enemies)
             {
                 enemy.Update(gameTime);
+                foreach (var bullet in ship.Bullets)
+                {
+                    bullet.CheckCollisions(enemy.HitBox);
+                    //Debug.WriteLine($"Bullet Y: {bullet.Position.Y}");
+                }
+
             }
 
             if (keyboardState.Contains(Keys.Space) && !previousState.Contains(Keys.Space)) 
@@ -95,18 +108,13 @@ namespace Space_Invaders
             if (!border.Contains(ship.Position))
             {
                 ship.outBorder();
-                foreach (var bullet in ship.Bullets)
-                {
-                    Debug.WriteLine($"Bullet Y: {bullet.Position.Y}");
-                }
-                
             }
             else 
             {
                 ship.inBorder();
             }
-
-
+            
+            
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
 

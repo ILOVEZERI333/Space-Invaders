@@ -57,7 +57,7 @@ namespace SpaceInvaders
             exhaustTextures.Add(game.Content.Load<Texture2D>("Exhaust-Normal-3"));
             exhaustTextures.Add(game.Content.Load<Texture2D>("Exhaust-Normal-4"));
 
-            animationManager = new AnimManager(50, exhaustTextures);
+            animationManager = new AnimManager(30, exhaustTextures);
         }
 
         //default ship will be created at spawn location with no powers

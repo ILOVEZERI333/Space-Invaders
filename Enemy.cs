@@ -19,11 +19,16 @@ namespace SpaceInvaders
         private int timeSinceLastFrame;
         private int millisecondsPerFrame = 350;
         private int anim2FrameCounter;
+        private Rectangle hitBox;
+        private Point locationPoint;
+
         public Vector2 Position { get { return _position; } }
 
         public Texture2D Texture { get { return _texture; } }
 
         public Rectangle CurrentFrame { get { return currentFrame; } }
+
+        public Rectangle HitBox{ get { return hitBox; } }
         #endregion
 
 
@@ -36,6 +41,9 @@ namespace SpaceInvaders
 
             _rectangles.Add(new Rectangle(0,0,_texture.Bounds.Width / 3, _texture.Bounds.Height));
             _rectangles.Add(new Rectangle((_texture.Bounds.Width / 3) * 2, 0, _texture.Bounds.Width / 3, _texture.Bounds.Height));
+            locationPoint = new Point((int)position.X - 4, (int)position.Y);
+            hitBox = new Rectangle(locationPoint, new Point(currentFrame.Width, currentFrame.Height));
+           
             currentFrame = _rectangles[0];
         }
         #endregion
@@ -52,6 +60,7 @@ namespace SpaceInvaders
                     anim2FrameCounter = 0;
                 }
                 currentFrame = _rectangles[anim2FrameCounter];
+                hitBox = new Rectangle(locationPoint, new Point(currentFrame.Width, currentFrame.Height));
             }
         }
 

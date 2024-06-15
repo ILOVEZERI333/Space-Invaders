@@ -3,6 +3,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Space_Invaders;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -29,6 +30,12 @@ namespace SpaceInvaders
         public Vector2 OldPosition { get { return _oldPosition; } }
 
         public Texture2D Texture { get { return _texture; } }
+
+        public bool Hit { get { return hit; } }
+        #endregion
+
+        #region events
+        
         #endregion
 
         #region constructor
@@ -51,15 +58,24 @@ namespace SpaceInvaders
         public void Update(GameTime gameTime) 
         {
             _texture = animationManager.Update(gameTime);
+            //if animation is on last frame,stop
+            if (_texture == bulletHitTextures[2])
+            {
+            animationManager.Stop();
+            }
             _position += new Vector2(0, _velocity);
         }
 
-        public void Hit(GameTime gametime)
+        public void CheckCollisions(Rectangle hitBox)
         {
-            hit = true;
-            
-
+            if (hitBox.Contains(_position))
+            {
+                hit = true;
+                _velocity = 0;
+                animationManager = new AnimManager(400, bulletHitTextures);
+            }
         }
+
 
         #endregion
     }
