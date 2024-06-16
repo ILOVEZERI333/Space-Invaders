@@ -16,6 +16,9 @@ namespace SpaceInvaders
         private List<Texture2D> frames = new List<Texture2D>();
         private int indexer;
         private bool active = true;
+
+        public bool Active { get { return active; } }
+        public List<Texture2D> Frames { get { return frames; } }
         #endregion
 
         #region constructor
@@ -36,7 +39,7 @@ namespace SpaceInvaders
                 if (millisecondsPerFrame < timeSinceLastFrame)
                 {
                     indexer++;
-                    if (indexer == frames.Count - 1)
+                    if (indexer == frames.Count)
                     {
                         indexer = 0;
                     }
@@ -50,6 +53,8 @@ namespace SpaceInvaders
                 return null;
             
         }
+
+
 
         public void Stop()
         {

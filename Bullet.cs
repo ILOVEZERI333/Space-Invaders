@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace SpaceInvaders
@@ -23,6 +24,9 @@ namespace SpaceInvaders
         private List<Texture2D> bulletHitTextures = new List<Texture2D>();
         private int millisecondsPerFrame = 300;
         private AnimManager animationManager;
+        private AnimManager hitAnimationManager;
+        private bool firstTime = true;
+        private bool finished;
 
 
         public Vector2 Position { get { return _position; } }
@@ -30,6 +34,8 @@ namespace SpaceInvaders
         public Vector2 OldPosition { get { return _oldPosition; } }
 
         public Texture2D Texture { get { return _texture; } }
+
+        public bool Finished { get { return finished; } }
 
         public bool Hit { get { return hit; } }
         #endregion
@@ -50,6 +56,7 @@ namespace SpaceInvaders
             bulletHitTextures.Add(game.Content.Load<Texture2D>("Impact-Ricochet-1"));
             bulletHitTextures.Add(game.Content.Load<Texture2D>("Impact-Ricochet-2"));
             bulletHitTextures.Add(game.Content.Load<Texture2D>("Impact-Ricochet-3"));
+            hitAnimationManager = new AnimManager(225, bulletHitTextures);
             animationManager = new AnimManager(300, texture2Ds);
         }
         #endregion
@@ -57,12 +64,25 @@ namespace SpaceInvaders
         #region methods
         public void Update(GameTime gameTime) 
         {
-            _texture = animationManager.Update(gameTime);
-            //if animation is on last frame,stop
-            if (_texture == bulletHitTextures[2])
+            if (!hit)
             {
-            animationManager.Stop();
+                _texture = animationManager.Update(gameTime);
             }
+            else
+            {
+                if (firstTime)
+                {
+                    _position += new Vector2(-2, -15);
+                }
+                _texture = hitAnimationManager.Update(gameTime);
+                if (_texture == bulletHitTextures[2])
+                {
+                    hitAnimationManager.Stop();
+                }
+                firstTime = false;
+            }
+                
+            //if animation is on last frame,stop
             _position += new Vector2(0, _velocity);
         }
 
@@ -72,7 +92,7 @@ namespace SpaceInvaders
             {
                 hit = true;
                 _velocity = 0;
-                animationManager = new AnimManager(400, bulletHitTextures);
+
             }
         }
 

@@ -67,24 +67,13 @@ namespace Space_Invaders
             
             ship.move(keyboardState, border);
             ship.Update(gameTime);
-            foreach (var bullet in ship.Bullets)
-            {
-                bullet.Update(gameTime);
-                if (keyboardState.Contains(Keys.C))
-                {
-                    Console.WriteLine();
-                }
-                if (bullet.Position.Y < 75)
-                {
-                    foreach (var enemy in enemies)
-                    {
-                        
-                    }
-                }
-            }
 
 #if DEBUG
-            
+            try 
+            {
+                Debug.WriteLine($"{ship.Bullets[0].Texture}");
+            }
+            catch (Exception ex) { }
 #endif
 
             //enemy anim frame time 
@@ -135,11 +124,15 @@ namespace Space_Invaders
                 _spriteBatch.Draw(ship.ExhaustTexture, exhaustAnimLocation, Color.White);
                 foreach (var bullet in ship.Bullets) 
                 {
-                    _spriteBatch.Draw(bullet.Texture, bullet.Position, null,Color.White, 0f, default, 1f, 0, 0.1f);
+                    if (bullet.Texture != null)
+                    {
+                        _spriteBatch.Draw(bullet.Texture, bullet.Position, null, Color.White, 0f, default, 1f, 0, 0.15f);
+                    }
+                    
                 }
                 foreach (var enemy in enemies) 
                 {
-                    _spriteBatch.Draw(enemy.Texture, enemy.Position, enemy.CurrentFrame,Color.White,0f,default,1f,0,0.2f);
+                    _spriteBatch.Draw(enemy.Texture, enemy.Position, enemy.CurrentFrame,Color.White,0f,default,1f,0,0.1f);
                 }
             }
             finally 

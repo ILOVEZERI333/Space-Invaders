@@ -24,7 +24,7 @@ namespace SpaceInvaders
         private List<Texture2D> healthTextures;
         private List<Bullet> shipBullets = new List<Bullet>();
         private float speed = 1.5f;
-        private AnimManager animationManager;
+        public AnimManager animationManager;
         private Texture2D exhaustTexture;
         Game1 game;
         private bool isInBorder;
@@ -79,6 +79,23 @@ namespace SpaceInvaders
         public void Update(GameTime gameTime)
         {
             exhaustTexture = animationManager.Update(gameTime);
+            foreach (var bullet in shipBullets)
+            {
+                bullet.Update(gameTime);
+            }
+            try
+            {
+                for (int i = shipBullets.Count; i >= 0; i--)
+                {
+                    if (shipBullets[i].Finished == true)
+                    {
+                        shipBullets.Remove(shipBullets[i]);
+                    }
+                }
+            }
+            //OKAY
+            catch (System.ArgumentOutOfRangeException ex) {}
+            
         }
 
         public void inBorder()
