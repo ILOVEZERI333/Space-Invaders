@@ -1,9 +1,11 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using Microsoft.Xna.Framework.Media;
 using SpaceInvaders;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Diagnostics;
 using System.Linq;
 
@@ -20,10 +22,12 @@ namespace Space_Invaders
         Keys[] keyboardState;
         private Rectangle border;
         private Vector2 exhaustAnimLocation;
-        private int anim4FrameCounter;
         Texture2D spaceBackground;
         private List<Enemy> enemies;
         private Vector2 defaultEnemyPosition;
+        private Vector2 spaceBetweenEnemies;
+        private int millisecondsPerEnemyMovement = 900;
+        private int millisecondsSinceLastMovement;
         #endregion
 
         public Game1()
@@ -36,6 +40,7 @@ namespace Space_Invaders
         protected override void Initialize()
         {
             // TODO: Add your initialization logic here
+            spaceBetweenEnemies = new Vector2(45,0);
             defaultEnemyPosition = new Vector2(165,57);
             ship = new Ships(this);
             border = new Rectangle(new Point(0,100),new Point(340,114));
@@ -47,16 +52,21 @@ namespace Space_Invaders
         
         protected override void LoadContent()
         {
-            enemies = new List<Enemy>() {new Enemy(this, defaultEnemyPosition), new Enemy(this, defaultEnemyPosition + new Vector2(35,0)), new Enemy(this, defaultEnemyPosition - new Vector2(35, 0)) };
+            enemies = new List<Enemy>() {new Enemy(this, defaultEnemyPosition), new Enemy(this, defaultEnemyPosition + spaceBetweenEnemies), new Enemy(this, defaultEnemyPosition - spaceBetweenEnemies), new Enemy(this, defaultEnemyPosition + spaceBetweenEnemies * 2), new Enemy(this, defaultEnemyPosition - spaceBetweenEnemies * 2) };
             spaceBackground = this.Content.Load<Texture2D>("SPACE BACKGROUND");
             ship.changeTexture(this.Content.Load<Texture2D>("JetFighter-1"));
             _spriteBatch = new SpriteBatch(GraphicsDevice);
-
+            MediaPlayer.Play(this.Content.Load<Song>("Cool With You"));
+            MediaPlayer.IsRepeating = false;
+            MediaPlayer.Volume = 0.05f;
             // TODO: use this.Content to load your game content here
         }
 
         protected override void Update(GameTime gameTime)
         {
+            List<Bullet> bulletsToRemove = new List<Bullet>();
+            Random random = new Random();
+            List<Enemy> enemiesToRemove = new List<Enemy>();
             Keys[] previousState = keyboardState;
             mouseState = Mouse.GetState();
             keyboardState = Keyboard.GetState().GetPressedKeys();
@@ -68,29 +78,76 @@ namespace Space_Invaders
             ship.move(keyboardState, border);
             ship.Update(gameTime);
 
-#if DEBUG
-            try 
+
+            millisecondsSinceLastMovement += gameTime.ElapsedGameTime.Milliseconds;
+            if (millisecondsSinceLastMovement > millisecondsPerEnemyMovement)
             {
-                Debug.WriteLine($"{ship.Bullets[0].Texture}");
+                int displacement;
+                if (random.Next(2) == 1)
+                {
+                    displacement = -4;
+                }
+                else
+                    displacement = 4;
+                foreach (var enemy in enemies)
+                {
+                    enemy.moveAround(new Vector2(displacement,0));
+                }
+                millisecondsSinceLastMovement = 0;
             }
-            catch (Exception ex) { }
+
+
+
+#if DEBUG
+            Debug.WriteLine($"{ship.HealthStage}");
 #endif
 
-            //enemy anim frame time 
+            foreach (var enemy in enemies)
+            {
+                enemy.shoot(this, gameTime);
+                foreach (var bullet in enemy.Bullets)
+                {
+                    
+                    if (bullet.CheckCollisions(ship.HitBox))
+                    {
+                        if (!bullet.HitDamageComplete)
+                        {
+                            ship.takeDamage(1);
+                            bullet.DamageComplete();
+                        }
+                        
+                        bulletsToRemove.Add(bullet);
+                        Debug.WriteLine($"{ship.HealthStage}");
+                    }
+                    
+                }
+            }
+            
+            
             foreach (var enemy in enemies)
             {
                 enemy.Update(gameTime);
                 foreach (var bullet in ship.Bullets)
                 {
-                    bullet.CheckCollisions(enemy.HitBox);
+                    if (bullet.CheckCollisions(enemy.HitBox))
+                    {
+                        enemy.AddBulletOnHit(bullet);
+                    }
+                    
                     //Debug.WriteLine($"Bullet Y: {bullet.Position.Y}");
                 }
+                enemy.RemoveHitBullets();
 
+            }
+
+            foreach (var enemy in enemiesToRemove)
+            {
+                enemies.Remove(enemy);
             }
 
             if (keyboardState.Contains(Keys.Space) && !previousState.Contains(Keys.Space)) 
             {
-                ship.shoot(ShipBulletTypes.Bullet);
+                ship.shoot(ShipBulletTypes.Bullet, this);
             }
 
 
@@ -132,7 +189,19 @@ namespace Space_Invaders
                 }
                 foreach (var enemy in enemies) 
                 {
-                    _spriteBatch.Draw(enemy.Texture, enemy.Position, enemy.CurrentFrame,Color.White,0f,default,1f,0,0.1f);
+                    _spriteBatch.Draw(enemy.Texture, enemy.Position, enemy.CurrentFrame,Color.White,0f,default,1f,0,0.16f);
+                }
+                foreach (var enemy in enemies)
+                {
+                    foreach (var bullet in enemy.Bullets)
+                    {
+                        if (bullet.Hit)
+                        {
+                            _spriteBatch.Draw(bullet.Texture, bullet.Position, null, Color.White, 0f, default, 1f, 0, 0.15f);
+                        }
+                        else
+                            _spriteBatch.Draw(bullet.Texture, bullet.Position, null, Color.White, 0f, default, 0.32f, 0, 0.15f);
+                    }
                 }
             }
             finally 

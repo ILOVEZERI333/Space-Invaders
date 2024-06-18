@@ -1,5 +1,6 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using SharpDX.XAudio2;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -31,7 +32,7 @@ namespace SpaceInvaders
 
         #region methods
 
-        public Texture2D? Update(GameTime gameTime)
+        public Texture2D Update(GameTime gameTime)
         {
             if (active)
             {
@@ -54,7 +55,10 @@ namespace SpaceInvaders
             
         }
 
-
+        public void Start()
+        {
+            active = true;
+        }
 
         public void Stop()
         {
