@@ -22,8 +22,8 @@ namespace SpaceInvaders
         private Microsoft.Xna.Framework.Vector2 position = new Microsoft.Xna.Framework.Vector2 (621/Game1.matrixScale,757/Game1.matrixScale);
         private Texture2D shipTexture;
         private List<Texture2D> exhaustTextures = new List<Texture2D>();
-        private int healthStage = 5;
-        private List<Texture2D> healthTextures;
+        private int healthStage = 4;
+        private List<Texture2D> healthTextures = new List<Texture2D>();
         private List<Bullet> shipBullets = new List<Bullet>();
         private float speed = 1.5f;
         public AnimManager animationManager;
@@ -33,6 +33,7 @@ namespace SpaceInvaders
         List<Texture2D> bulletTextures = new List<Texture2D>();
         List<Texture2D> bulletHitTextures = new List<Texture2D>();
         private Rectangle hitBox;
+        private Texture2D healthTexture;
 
 
         public Rectangle HitBox { get { return hitBox; } }
@@ -44,6 +45,8 @@ namespace SpaceInvaders
         public Microsoft.Xna.Framework.Vector2 Position { get { return position; } }
 
         public Texture2D ShipTexture{ get { return shipTexture; } }
+
+        public Texture2D HealthTexture {  get { return healthTexture; } }
 
         public int HealthStage { get { return healthStage; } }
 
@@ -67,6 +70,11 @@ namespace SpaceInvaders
             bulletHitTextures.Add(game.Content.Load<Texture2D>("Impact-Ricochet-1"));
             bulletHitTextures.Add(game.Content.Load<Texture2D>("Impact-Ricochet-2"));
             bulletHitTextures.Add(game.Content.Load<Texture2D>("Impact-Ricochet-3"));
+            healthTextures.Add(game.Content.Load<Texture2D>("Heart Stage 1"));
+            healthTextures.Add(game.Content.Load<Texture2D>("Heart Stage 2"));
+            healthTextures.Add(game.Content.Load<Texture2D>("Heart Stage 3"));
+            healthTextures.Add(game.Content.Load<Texture2D>("Heart Stage 4"));
+            healthTextures.Add(game.Content.Load<Texture2D>("Heart Stage 5"));
             MediaPlayer.Volume = 0.5f;
             MediaPlayer.IsRepeating = false;
             animationManager = new AnimManager(30, exhaustTextures);
@@ -102,7 +110,7 @@ namespace SpaceInvaders
             }
 
             Bullet.CleanUpBullets(Bullets);
-            
+            healthTexture = healthTextures[4 - healthStage];
 
         }
 

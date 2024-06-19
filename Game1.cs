@@ -28,6 +28,9 @@ namespace Space_Invaders
         private Vector2 spaceBetweenEnemies;
         private int millisecondsPerEnemyMovement = 900;
         private int millisecondsSinceLastMovement;
+        private Vector2 healthPostion = new Vector2(164,225);
+        private bool gameOver = false;
+        private Texture2D gameLost;
         #endregion
 
         public Game1()
@@ -52,6 +55,7 @@ namespace Space_Invaders
         
         protected override void LoadContent()
         {
+            gameLost = this.Content.Load<Texture2D>("YOU SUCK");
             enemies = new List<Enemy>() {new Enemy(this, defaultEnemyPosition), new Enemy(this, defaultEnemyPosition + spaceBetweenEnemies), new Enemy(this, defaultEnemyPosition - spaceBetweenEnemies), new Enemy(this, defaultEnemyPosition + spaceBetweenEnemies * 2), new Enemy(this, defaultEnemyPosition - spaceBetweenEnemies * 2) };
             spaceBackground = this.Content.Load<Texture2D>("SPACE BACKGROUND");
             ship.changeTexture(this.Content.Load<Texture2D>("JetFighter-1"));
@@ -71,94 +75,91 @@ namespace Space_Invaders
             mouseState = Mouse.GetState();
             keyboardState = Keyboard.GetState().GetPressedKeys();
             exhaustAnimLocation = new Vector2(ship.Position.X + ship.ShipTexture.Width / 2.5f, ship.Position.Y + ship.ShipTexture.Height);
-            
-            
 
-            
-            ship.move(keyboardState, border);
-            ship.Update(gameTime);
+            Debug.WriteLine($"X:{mouseState.X},  Y:{mouseState.Y}");
 
-
-            millisecondsSinceLastMovement += gameTime.ElapsedGameTime.Milliseconds;
-            if (millisecondsSinceLastMovement > millisecondsPerEnemyMovement)
+            if (ship.HealthStage != 0)
             {
-                int displacement;
-                if (random.Next(2) == 1)
+                ship.move(keyboardState, border);
+                ship.Update(gameTime);
+
+
+                millisecondsSinceLastMovement += gameTime.ElapsedGameTime.Milliseconds;
+                if (millisecondsSinceLastMovement > millisecondsPerEnemyMovement)
                 {
-                    displacement = -4;
+                    int displacement;
+                    if (random.Next(2) == 1)
+                    {
+                        displacement = -4;
+                    }
+                    else
+                        displacement = 4;
+                    foreach (var enemy in enemies)
+                    {
+                        enemy.moveAround(new Vector2(displacement, 0));
+                    }
+                    millisecondsSinceLastMovement = 0;
                 }
-                else
-                    displacement = 4;
+
                 foreach (var enemy in enemies)
                 {
-                    enemy.moveAround(new Vector2(displacement,0));
-                }
-                millisecondsSinceLastMovement = 0;
-            }
-
-
-
-#if DEBUG
-            Debug.WriteLine($"{ship.HealthStage}");
-#endif
-
-            foreach (var enemy in enemies)
-            {
-                enemy.shoot(this, gameTime);
-                foreach (var bullet in enemy.Bullets)
-                {
-                    
-                    if (bullet.CheckCollisions(ship.HitBox))
+                    enemy.shoot(this, gameTime);
+                    foreach (var bullet in enemy.Bullets)
                     {
-                        if (!bullet.HitDamageComplete)
+
+                        if (bullet.CheckCollisions(ship.HitBox))
                         {
-                            ship.takeDamage(1);
-                            bullet.DamageComplete();
+                            if (!bullet.HitDamageComplete)
+                            {
+                                ship.takeDamage(1);
+                                bullet.DamageComplete();
+                            }
+
+                            bulletsToRemove.Add(bullet);
                         }
-                        
-                        bulletsToRemove.Add(bullet);
-                        Debug.WriteLine($"{ship.HealthStage}");
+
                     }
-                    
                 }
-            }
-            
-            
-            foreach (var enemy in enemies)
-            {
-                enemy.Update(gameTime);
-                foreach (var bullet in ship.Bullets)
+
+
+                foreach (var enemy in enemies)
                 {
-                    if (bullet.CheckCollisions(enemy.HitBox))
+                    enemy.Update(gameTime);
+                    foreach (var bullet in ship.Bullets)
                     {
-                        enemy.AddBulletOnHit(bullet);
+                        if (bullet.CheckCollisions(enemy.HitBox))
+                        {
+                            enemy.AddBulletOnHit(bullet);
+                            enemiesToRemove.Add(enemy);
+                        }
+
+                        //Debug.WriteLine($"Bullet Y: {bullet.Position.Y}");
                     }
-                    
-                    //Debug.WriteLine($"Bullet Y: {bullet.Position.Y}");
+                    enemy.RemoveHitBullets();
+
                 }
-                enemy.RemoveHitBullets();
 
-            }
+                foreach (var enemy in enemiesToRemove)
+                {
+                    enemies.Remove(enemy);
+                }
 
-            foreach (var enemy in enemiesToRemove)
-            {
-                enemies.Remove(enemy);
-            }
-
-            if (keyboardState.Contains(Keys.Space) && !previousState.Contains(Keys.Space)) 
-            {
-                ship.shoot(ShipBulletTypes.Bullet, this);
-            }
+                if (keyboardState.Contains(Keys.Space) && !previousState.Contains(Keys.Space))
+                {
+                    ship.shoot(ShipBulletTypes.Bullet, this);
+                }
 
 
-            if (!border.Contains(ship.Position))
-            {
-                ship.outBorder();
+                if (!border.Contains(ship.Position))
+                {
+                    ship.outBorder();
+                }
+                else
+                {
+                    ship.inBorder();
+                }
             }
-            else 
-            {
-                ship.inBorder();
-            }
+            
             
             
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
@@ -179,6 +180,7 @@ namespace Space_Invaders
                 _spriteBatch.Draw(spaceBackground, new Vector2(0,0), null,Color.White, 0f, default, 1f, SpriteEffects.None,0);
                 _spriteBatch.Draw(ship.ShipTexture, ship.Position, null,Color.White, 0f , default, 1f, SpriteEffects.None, 0.2f);
                 _spriteBatch.Draw(ship.ExhaustTexture, exhaustAnimLocation, Color.White);
+                _spriteBatch.Draw(ship.HealthTexture, healthPostion, null, Color.White, 0f, default, 0.23f, 0, 0.21f);
                 foreach (var bullet in ship.Bullets) 
                 {
                     if (bullet.Texture != null)
@@ -202,6 +204,10 @@ namespace Space_Invaders
                         else
                             _spriteBatch.Draw(bullet.Texture, bullet.Position, null, Color.White, 0f, default, 0.32f, 0, 0.15f);
                     }
+                }
+                if (ship.HealthStage == 0)
+                {
+                    _spriteBatch.Draw(gameLost, new Vector2(100.25f,80), null,Color.White,0f,default,1f,0,0.22f);
                 }
             }
             finally 
